@@ -1,5 +1,5 @@
 from PIL import Image, ImageDraw, ImageFont
-import numpy as np
+import  gradio as gr
 #install timm pip install timm..
 from transformers import  pipeline
 
@@ -77,8 +77,17 @@ def draw_bounding_boxes(image, detections, font_path=None):
 
     return image
 
-# Draw bounding boxes
-output_image = draw_bounding_boxes(raw_image, output)
+def show_gradio_image(pilIMage):
+    output_image = draw_bounding_boxes(raw_image, output)
+    # Save or display the result
+    return  output_image.show()
 
-# Save or display the result
-output_image.show()
+
+
+gr_interface = gr.Interface(
+    fn=show_gradio_image,
+    inputs=gr.Image(type="pil", label="Upload an Image"),
+    outputs=gr.Image(type="pil", label="Image with Bounding Boxes"),
+    title="Object Detection Viewer",
+    description="Upload an image, and the app will draw bounding boxes and labels on it based on sample detections."
+)
