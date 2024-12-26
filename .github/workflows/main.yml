@@ -15,4 +15,4 @@ jobs:
       - name: Push to hub
         env:
           HF_TOKEN: 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
-        run: git push -f https://zohaib1313:$HF_TOKEN@huggingface.co/spaces/zohaib1313/image_detector main
+        run: git push -f https://zohaib1313:$HF_TOKEN@huggingface.co/spaces/zohaib1313/image_detector
