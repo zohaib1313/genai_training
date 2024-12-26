@@ -1,18 +1,20 @@
 from PIL import Image, ImageDraw, ImageFont
-import  gradio as gr
-#install timm pip install timm..
-from transformers import  pipeline
+import gradio as gr
+# install timm pip install timm..
+from transformers import pipeline
 
-model_path="../models/models--facebook--detr-resnet-50/snapshots/1d5f47bd3bdd2c4bbfa585418ffe6da5028b4c0b"
+model_path = "../models/models--facebook--detr-resnet-50/snapshots/1d5f47bd3bdd2c4bbfa585418ffe6da5028b4c0b"
 
-#object_detector = pipeline("object-detection", model="facebook/detr-resnet-50")
+# object_detector = pipeline("object-detection", model="facebook/detr-resnet-50")
 object_detector = pipeline("object-detection", model=model_path)
 
-#read images....
+# read images....
 raw_image = Image.open("../files/animals.png")
 
-output= object_detector(raw_image)
 
+# output= object_detector(raw_image)
+
+# print(output)
 
 def draw_bounding_boxes(image, detections, font_path=None):
     """
@@ -77,17 +79,19 @@ def draw_bounding_boxes(image, detections, font_path=None):
 
     return image
 
-def show_gradio_image(pilIMage):
-    output_image = draw_bounding_boxes(raw_image, output)
-    # Save or display the result
-    return  output_image.show()
 
+def detect_image_and_draw_boundaries(image):
+    output_pil = object_detector(image)
+    processed_image = draw_bounding_boxes(image, output_pil)
+    return processed_image
 
 
 gr_interface = gr.Interface(
-    fn=show_gradio_image,
+    fn=detect_image_and_draw_boundaries,
     inputs=gr.Image(type="pil", label="Upload an Image"),
     outputs=gr.Image(type="pil", label="Image with Bounding Boxes"),
     title="Object Detection Viewer",
     description="Upload an image, and the app will draw bounding boxes and labels on it based on sample detections."
 )
+
+gr_interface.launch()
