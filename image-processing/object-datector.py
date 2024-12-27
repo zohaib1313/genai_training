@@ -8,7 +8,7 @@ model_path = "../models/models--facebook--detr-resnet-50/snapshots/1d5f47bd3bdd2
 # object_detector = pipeline("object-detection", model="facebook/detr-resnet-50")
 object_detector = pipeline("object-detection", model=model_path)
 
-# read images....
+# read images. ...
 raw_image = Image.open("../files/animals.png")
 
 

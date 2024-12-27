@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="534f8a8f-e7ec-4a19-9412-73ced034bb35" name="Changes" comment="image processings">
+      <change afterPath="$PROJECT_DIR$/image-processing/object-detector-with-audio.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/image-processing/object-datector.py" beforeDir="false" afterPath="$PROJECT_DIR$/image-processing/object-datector.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,14 +50,16 @@
   "keyToString": {
     "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
     "Python.object-datector.executor": "Run",
+    "Python.object-detector-with-audio.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "/Users/zohaib/PycharmProjects/GenAiCodebasics/Models",
+    "last_opened_file_path": "/Users/zohaib/PycharmProjects/GenAiCodebasics/models",
     "settings.editor.selected.configurable": "project.propVCSSupport.Mappings"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/models" />
       <recent name="$PROJECT_DIR$/Models" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -129,7 +133,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735238164191</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="image processings">
+      <option name="closed" value="true" />
+      <created>1735240110601</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1735240110601</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
